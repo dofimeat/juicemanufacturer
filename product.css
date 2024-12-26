@@ -1,0 +1,279 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: Inter, var(--default-font-family);
+    background-color: var(--background-color);
+    color: var(--main-color);
+    overflow-x: hidden; /* Убираем горизонтальный скролл */
+  }
+  
+  /* Шапка */
+  header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    background-color: #d2c6c6;
+    padding: 20px;
+    width: 100%;
+    height: 100px; /* Фиксируем высоту шапки */
+    position: fixed; /* Закрепляем шапку наверху */
+    top: 0;
+    z-index: 1000;
+  }
+  
+  header .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  header .logo img {
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+  }
+  
+  header .fruit-juice {
+    font-size: 40px;
+    font-weight: 700;
+    color: black;
+  }
+  
+  header nav {
+    display: flex;
+    justify-content: flex-start; /* Устанавливаем выравнивание влево */
+    gap: 120px; /* Отступ между пунктами */
+    margin-right: 100px; /* Убираем левый отступ, если он существует */
+  }
+  
+  header nav a {
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--main-color);
+  }
+  
+  header nav a:hover {
+    text-decoration: underline;
+  }
+
+/* main */
+
+.product-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  padding: 60px 0;
+  text-align: center;
+  margin-top: 200px;
+}
+
+.decorative-leaf {
+  position: absolute;
+  top: -30px;
+  left: -10px;
+  width: 520px;
+  height: 477px;
+  z-index: 1;
+  transform: translateY(0); /* Добавлено для анимации */
+  transition: transform 0.1s ease-out;
+}
+
+.decorative-leaf img {
+  max-width: 100%;
+  height: auto;
+}
+
+.product-image {
+  z-index: 2;
+  width: 695px;
+  height: 669px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border: 3px solid black;
+  border-radius: 15px;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-left: 150px;
+}
+
+.product-image img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 10px;
+}
+
+.product-info {
+  z-index: 2;
+  width: 732px;
+  height: 623px;
+  padding: 20px;
+  margin-right: 30px;
+  border-radius: 30px;
+  background: #7D9141;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: left;
+}
+
+.title-container h2 {
+  font-weight: bold;
+  color: black;
+  font-size: 45px;
+  text-align: center;
+  margin-top: 300px;
+}
+
+.product-info p {
+  font-size: 30px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.product-info ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  padding-left: 0;
+}
+
+.product-info li {
+  font-size: 30px;
+  line-height: 1.4;
+}
+
+.decorative-bubbles {
+  position: absolute;
+  bottom: -50px;
+  right: -10px;
+  width: 150px;
+  z-index: 1;
+  transform: translateY(0); /* Добавлено для анимации */
+  transition: transform 0.1s ease-out;
+}
+
+.decorative-bubbles img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* футер */
+.footer {
+    background: #F0A43C;
+    padding: 60px 20px; /* Увеличиваем отступы */
+    color: #000;
+    font-family: Arial, sans-serif;
+    position: relative;
+    width: 100%;
+    min-height: 500px; /* Устанавливаем минимальную высоту футера */
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    position: relative;
+  }
+  
+  .footer-form {
+    max-width: 45%;
+    margin-left: 150px; /* Сдвигаем форму регистрации вправо */
+    font-size: 20px;
+  }
+  
+  .footer-info h3,
+  .footer-info h4 {
+    margin-bottom: 15px; /* Увеличиваем отступы заголовков */
+  }
+  
+  
+  .footer-form input,
+  .footer-form button {
+    width: 100%;
+    padding: 15px; /* Увеличиваем высоту полей ввода и кнопки */
+    margin-bottom: 15px; /* Увеличиваем отступы между элементами формы */
+    border: 1px solid #000;
+    border-radius: 5px;
+  }
+  
+  .footer-form button {
+    width: 50%; /* Уменьшаем ширину кнопки до 50% */
+    margin: 20px auto 0; /* Выравниваем кнопку по центру формы */
+    font-size: 20px;
+    display: block; /* Делаем кнопку блочным элементом для центрирования */
+    border-radius: 15px;
+    background: #D9D9D9;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px; /* Уменьшаем высоту кнопки */
+  }
+  
+  .checkbox-container {
+    display: flex;
+    align-items: center;
+    font-size: 14px; /* Увеличиваем размер шрифта */
+    margin-left: 0;
+  }
+  
+  .checkbox-container input {
+    margin-right: -100px;
+    margin-left: -110px;
+  }
+  
+  .footer-info {
+    max-width: 50%;
+    padding-right: 420px; /* Отступ слева */
+    font-size: 25px;
+  }
+  
+  .footer-info p {
+    margin: 8px 0; /* Увеличиваем отступы между контактами */
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 15px; /* Увеличиваем расстояние между иконками соцсетей */
+    margin-top: 15px;
+  }
+  
+  .social-icons i {
+    font-size: 30px; /* Увеличиваем размер иконок */
+    color: #000; /* Устанавливаем цвет иконок, если это необходимо */
+  }
+  
+  .footer-links a {
+    display: block;
+    margin-top: 15px; /* Увеличиваем отступы между ссылками */
+    text-decoration: underline;
+    color: #000;
+  }
+  
+  /* Вертикальная линия */
+  .vertical-line {
+    width: 2px;
+    background: #000;
+    height: 550px; /* Увеличиваем высоту вертикальной линии */
+    position: absolute;
+    left: 50%;
+    top: -60px; /* Настраиваем смещение */
+    transform: translateX(-50%);
+  }
+  
+  /* Черный блок внизу */
+  .footer-bottom {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0; /* Увеличиваем отступы */
+    font-size: 16px; /* Увеличиваем размер текста */
+    width: 100%; /* Гарантируем ширину на весь экран */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }

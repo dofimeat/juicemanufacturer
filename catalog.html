@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalog</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="catalog.css" />
+</head>
+<body>
+    <header class="header">
+        <a href="main.html" class="logo">
+            <img src="./assets/logo.jpg" alt="Fruit Juice Logo" />
+            <span class="fruit-juice">fruit Juice</span>
+        </a>
+        <nav class="nav">
+            <a href="./main.html">Наши преимущества</a>
+            <a href="./catalog.html">Продукция</a>
+            <a href="./AboutCompany.html">О компании</a>
+            <a href="./partners.html">Партнерам</a>
+        </nav>
+    </header>
+    <main>
+        <section class="catalog">
+            <h2>Каталог продукции</h2>
+            <div class="product-cards">
+                <div class="product-card">
+                    <img src="./assets/juice-4.png" alt="KRAL сок">
+                    <h3>Лимонный сок</h3>
+                    <button onclick="window.location.href='product.html'">Подробнее</button>
+                </div>
+                <div class="product-card">
+                    <img src="./assets/juice-5.png" alt="DeVita сок">
+                    <h3>Апельсиновый сок</h3>
+                    <button onclick="window.location.href='product.html'">Подробнее</button>
+                </div>
+                <div class="product-card">
+                    <img src="./assets/juice-6.png" alt="Melograno сок">
+                    <h3>Арбузный сок</h3>
+                    <button onclick="window.location.href='product.html'">Подробнее</button>
+                </div>
+                <div class="product-card">
+                    <img src="./assets/juice-3.png" alt="Melograno сок">
+                    <h3>Цитрусовый сок</h3>
+                    <button onclick="window.location.href='product.html'">Подробнее</button>
+                </div>
+                <div class="product-card">
+                    <img src="./assets/juice-1.png" alt="Melograno сок">
+                    <h3>Мандариновый сок</h3>
+                    <button onclick="window.location.href='product.html'">Подробнее</button>
+                </div>
+                <div class="product-card">
+                    <img src="./assets/juice-2.png" alt="Melograno сок">
+                    <h3>Сок из памелы</h3>
+                    <button onclick="window.location.href='product.html'">Подробнее</button>
+                </div>
+            </div>
+        </section>
+        <section class="about">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="./assets/healthy-juice-bottles-assortment 1.png" alt="Бутылки с соками">
+                </div>
+                <div class="about-text">
+                    
+                    <p>
+                        В "Fruit Juice" мы стремимся создать идеальную гармонию между природой и здоровьем, 
+                        предлагая нашим клиентам исключительно натуральные и полезные напитки. Наша продукция 
+                        охватывает широкий ассортимент, в который входят разнообразные соки, каждый из которых 
+                        разрабатывается с максимальной заботой о здоровье и благополучии потребителей.
+                    </p>
+                    <p>
+                        Мы используем только самые лучшие фрукты и ягоды, отобранные с особой тщательностью. 
+                        Главное сырье для нашего производства поступает из экологически чистых регионов, что 
+                        обеспечивает высокое качество и насыщенный вкус нашей продукции.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Левая часть футера (форма заявки) -->
+            <div class="footer-form">
+                <h3>Хотите стать нашим партнером?</h3>
+                <p>Оставьте заявку, мы с вами свяжемся!</p>
+                <form action="#">
+                    <input type="text" placeholder="Имя" required />
+                    <input type="tel" placeholder="Телефон" required />
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="agreement" />
+                        <label for="agreement">
+                            Я соглашаюсь с условиями
+                            <a href="#">политики конфиденциальности</a> и
+                            <a href="#">пользовательского соглашения</a>.
+                        </label>
+                    </div>
+                    <button type="submit">Оставить заявку</button>
+                </form>
+            </div>
+    
+            <!-- Вертикальная линия -->
+            <div class="vertical-line"></div>
+    
+            <!-- Правая часть футера (контакты) -->
+            <div class="footer-info">
+                <h3>Контакты</h3>
+                <p><i class="fa-solid fa-phone"></i> 8 234 567-89-89</p>
+                <p><i class="fa-solid fa-envelope"></i> fruitjuice@gmail.com</p>
+                <p><i class="fa-solid fa-calendar-days"></i> Пн-Вс: с 10:00 - 19:00</p>
+                <h4>Наши соц. сети</h4>
+                <div class="social-icons">
+                    <i class="fa-brands fa-vk"></i>
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <i class="fa-brands fa-telegram"></i>
+                </div>
+                <div class="footer-links">
+                    <a href="#">Политика конфиденциальности</a>
+                    <a href="#">Пользовательское соглашение</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; Fruitjuice, 2021-2024</p>
+        </div>
+    </footer>
+</body>
+</html>

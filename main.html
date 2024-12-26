@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Juice Fruit</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <!-- Шапка -->
+    <header class="header">
+        <a href="main.html" class="logo">
+            <img src="./assets/logo.jpg" alt="Fruit Juice Logo" />
+            <span class="fruit-juice">fruit Juice</span>
+        </a>
+        <nav class="nav">
+            <a href="./main.html">Наши преимущества</a>
+            <a href="./catalog.html">Продукция</a>
+            <a href="./AboutCompany.html">О компании</a>
+            <a href="./partners.html">Партнерам</a>
+        </nav>
+    </header>
+
+    <!-- Основной блок --> 
+    <section class="hero-section">
+        <div class="content">
+            <!-- Блок изображений -->
+            <div class="images">
+                <div class="main-image-container">
+                    <img src="./assets/slide1.png" alt="Апельсиновый сок" id="main-image" class="main-image" />
+                </div>
+                <div class="small-images">
+                    <img src="./assets/slide1.png" alt="Апельсиновый сок" class="small-image" data-text="Свежевыжатый апельсиновый сок" />
+                    <img src="./assets/slide2.jpeg" alt="Гранатовый сок" class="small-image" data-text="Насыщенный гранатовый сок" />
+                    <img src="./assets/slide3.jpg" alt="Лимонный сок" class="small-image" data-text="Освежающий лимонный сок" />
+                </div>
+            </div>
+    
+            <!-- Текстовый блок -->
+            <div class="text-content">
+                <h1 class="orange-juice" id="juice-title">Свежевыжатый апельсиновый сок</h1>
+                <p class="description" id="juice-description">
+                    Свежевыжатый апельсиновый сок — это не просто напиток, а настоящая симфония вкуса и аромата! Каждое утро, когда солнце только начинает подниматься над горизонтом, его яркий оранжевый цвет наполняет кухню теплом и радостью
+                </p>
+                <button class="product-btn" onclick="window.location.href='catalog.html'">Подробнее</button>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        const mainImage = document.getElementById('main-image');
+        const juiceTitle = document.getElementById('juice-title');
+        const juiceDescription = document.getElementById('juice-description');
+        const smallImages = document.querySelectorAll('.small-image');
+
+        function changeImage() {
+            const currentImage = event.target;
+            mainImage.src = currentImage.src;
+            juiceTitle.textContent = currentImage.getAttribute('data-text');
+            juiceDescription.textContent = getDescriptionForImage(currentImage.src);
+        }
+    
+        function getDescriptionForImage(imageSrc) {
+            if (imageSrc.includes('slide2')) {
+                return "Свежевыжатый гранатовый сок - это не просто напиток, а настоящая симфония вкуса и аромата! Каждое утро, когда солнце только начинает подниматься над горизонтом, его яркий красный цвет наполняет кухню теплом и радостью. Аромат граната, выжатого из сочных и сладких плодов, наполняет воздух и пробуждает аппетит.";
+            } else if (imageSrc.includes('slide3')) {
+                return "Свежевыжатый сок из дыни - это не просто напиток, а настоящая симфония вкуса и аромата! Каждое утро, когда солнце только начинает подниматься над горизонтом, его прозрачный цвет наполняет кухню свежестью и радостью. Аромат дыни, выжатой из сочных и сладких плодов, наполняет воздух и пробуждает аппетит.";
+            } else {
+                return "Свежевыжатый апельсиновый сок — это не просто напиток, а настоящая симфония вкуса и аромата! Каждое утро, когда солнце только начинает подниматься над горизонтом, его яркий оранжевый цвет наполняет кухню теплом и радостью";
+            }
+        }
+    
+        smallImages.forEach(image => {
+            image.addEventListener('click', changeImage);
+        });
+    </script>
+
+        <!-- Секция с преимуществами -->
+        <section class="benefits" id="benefits">
+            <h2>Наши преимущества</h2>
+            <div class="benefits-list">
+                <div class="benefit-item">
+                    <h3>Лаборатория контроля качества</h3>
+                    <div class="benefit-content">
+                        <p>Мы проверяем каждую партию соков и нектаров на соответствие международным нормам качества.</p>
+                        <img src="./assets/benefits-icon-1.png" alt="Лаборатория контроля качества">
+                    </div>
+                </div>
+                <div class="benefit-item reverse">
+                    <h3>Собственная скважина</h3>
+                    <div class="benefit-content">
+                        <img src="./assets/benefits-icon-2.png" alt="Собственная скважина">
+                        <p>Мы владеем собственной скважиной в 220 метров, из которой очищается и добывается вода.</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <h3>Технологии Tetra Pak</h3>
+                    <div class="benefit-content">
+                        <p>Мы используем современные технологии упаковки для сохранения свежести продуктов.</p>
+                        <img src="./assets/benefits-icon-3.png" alt="Технологии Tetra Pak">
+                    </div>
+                </div>
+                <div class="benefit-item reverse">
+                    <h3>Доставка транспортом в любой регион РФ</h3>
+                    <div class="benefit-content">
+                        <img src="./assets/benefits-icon-4.png" alt="Доставка">
+                        <p>Мы обеспечиваем доставку нашей продукции в любой регион РФ.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="products">
+            <h2>Продукция</h2>
+            <div class="product-cards">
+                <div class="product-card">
+                    <img src="./assets/juice-1.png" alt="KRAL сок">
+                    <p>KRAL – это натуральные соки и нектары премиум класса без содержания красителей, ароматизаторов и консервантов.</p>
+                    <button onclick="window.location.href='catalog.html'">Подробнее</button>
+                </div>
+                <div class="product-card">
+                    <img src="./assets/juice-2.png" alt="DeVita сок">
+                    <p>DeVita – TetraPak позволяет надолго сохранять свежесть и качество продукции и делает соки DeVita доступными всем.</p>
+                    <button onclick="window.location.href='catalog.html'">Подробнее</button>
+                </div>
+                <div class="product-card">
+                    <img src="./assets/juice-3.png" alt="Melograno сок">
+                    <p>Melograno – самые сочные вкусы в стильной пластиковой бутылке для отличного настроения.</p>
+                    <button onclick="window.location.href='catalog.html'">Подробнее</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-company">
+            <h2>О компании</h2>
+            <div class="about-company-content">
+              <div class="about-company-image">
+                <img src="./assets/juice_company_image.png" alt="Сок">
+              </div>
+              <div class="about-company-text">
+                <p>"Fruit Juice" — производитель натуральных соков и фруктовых напитков. Мы используем свежие, отборные фрукты без искусственных добавок. Стремимся к устойчивому развитию и экологической упаковке, поддерживая местных производителей. Наслаждайтесь вкусным и полезным продуктом.</p>
+                <div class="mountain-image">
+                  <img src="./assets/mountains_image.png" alt="Горы">
+                </div>
+              </div>
+            </div>
+        </section>
+
+        <section class="partners">
+            <h2>Постоянные партнеры нашей компании</h2>
+            <p>Длительное время ООО «Fruit juice» работает с крупными сетями России и смог зарекомендовать себя как надежный партнер, с четким исполнением своих обязательств.</p>
+            <div class="partners-grid">
+              <!-- Вертикальные линии -->
+              <div class="vertical-line left"></div>
+              <div class="vertical-line right"></div>
+              <!-- Логотипы -->
+              <img src="./assets/magnit.png" alt="Магнит">
+              <img src="./assets/spar.png" alt="Spar">
+              <img src="./assets/krasnodarochka.png" alt="Краснодарочка">
+              <img src="./assets/tabris.png" alt="Табрис">
+              <img src="./assets/aprel.png" alt="Апрель">
+              <img src="./assets/gelios.png" alt="Гелиос">
+            </div>
+          </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Левая часть футера (форма заявки) -->
+            <div class="footer-form">
+                <h3>Хотите стать нашим партнером?</h3>
+                <p>Оставьте заявку, мы с вами свяжемся!</p>
+                <form action="#">
+                    <input type="text" placeholder="Имя" required />
+                    <input type="tel" placeholder="Телефон" required />
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="agreement" />
+                        <label for="agreement">
+                            Я соглашаюсь с условиями
+                            <a href="#">политики конфиденциальности</a> и
+                            <a href="#">пользовательского соглашения</a>.
+                        </label>
+                    </div>
+                    <button type="submit">Оставить заявку</button>
+                </form>
+            </div>
+    
+            <!-- Вертикальная линия -->
+            <div class="vertical-line"></div>
+    
+            <!-- Правая часть футера (контакты) -->
+            <div class="footer-info">
+                <h3>Контакты</h3>
+                <p><i class="fa-solid fa-phone"></i> 8 234 567-89-89</p>
+                <p><i class="fa-solid fa-envelope"></i> fruitjuice@gmail.com</p>
+                <p><i class="fa-solid fa-calendar-days"></i> Пн-Вс: с 10:00 - 19:00</p>
+                <h4>Наши соц. сети</h4>
+                <div class="social-icons">
+                    <i class="fa-brands fa-vk"></i>
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <i class="fa-brands fa-telegram"></i>
+                </div>
+                <div class="footer-links">
+                    <a href="#">Политика конфиденциальности</a>
+                    <a href="#">Пользовательское соглашение</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; Fruitjuice, 2021-2024</p>
+        </div>
+    </footer>
+</body>
+</html>
