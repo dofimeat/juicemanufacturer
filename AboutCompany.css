@@ -1,16 +1,17 @@
 html, body {
-    padding: 0;
-    margin: 0;
-    font-family: Inter, var(--default-font-family);
-    background-color: var(--background-color);
-    color: var(--main-color);
-    overflow-x: hidden; /* Убираем горизонтальный скролл */
-  }
+  padding: 0;
+  margin: 0;
+  font-family: Inter, var(--default-font-family);
+  background-color: var(--background-color);
+  color: var(--main-color);
+  overflow-x: hidden; /* Убираем горизонтальный скролл */
+}
+
   
   /* Шапка */
   header {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; 
     align-items: center;
     background-color: #d2c6c6;
     padding: 20px;
@@ -40,13 +41,14 @@ html, body {
   
   header nav {
     display: flex;
-    justify-content: center;
-    gap: 50px; /* Фиксированный отступ между пунктами */
+    justify-content: flex-start; /* Устанавливаем выравнивание влево */
+    gap: 120px; /* Отступ между пунктами */
+    margin-right: 100px; /* Убираем левый отступ, если он существует */
   }
   
   header nav a {
     text-decoration: none;
-    font-size: 20px;
+    font-size: 25px;
     font-weight: 700;
     color: var(--main-color);
   }
@@ -54,7 +56,32 @@ html, body {
   header nav a:hover {
     text-decoration: underline;
   }
-
+  
+  @media (max-width: 480px) {
+    header {
+      padding: 10px;
+    }
+  
+    header .logo {
+      margin-bottom: 10px;
+    }
+  
+    header .fruit-juice {
+      font-size: 20px;
+    }
+  
+    header nav {
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+      margin-right: 0;
+    }
+  
+    header nav a {
+      font-size: 15px;
+    }
+  }
+  
 /* main */
 .about-company {
   padding: 60px 0;
